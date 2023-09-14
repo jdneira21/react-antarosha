@@ -41,7 +41,7 @@ export default function PageAboutUs() {
             <div className="mb-2 border-t border-blue-gray-50 py-2 text-center">
               <div className="mb-2 flex items-center justify-center gap-2">
                 <Typography className="text-2xl font-normal text-blue-gray-700">
-                  Misión
+                  Visión
                 </Typography>
               </div>
               <div className="mt-2 flex flex-wrap justify-center">
