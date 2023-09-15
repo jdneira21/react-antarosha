@@ -1,27 +1,230 @@
-import { Typography } from '@material-tailwind/react';
+import { Button, Carousel, Typography } from '@material-tailwind/react';
+import { RiRecycleFill } from 'react-icons/ri'
 import logo from '../assets/logo.png'
 
 export default function PageHome() {
   return (
-    <section className="relative bg-green-100/90 py-16 px-4">
-    <div className="container mx-auto">
-    <div className="relative mb-6 -mt-64 flex w-full min-w-0 flex-col break-words rounded-3xl bg-white shadow-xl shadow-gray-500/20">
-        <div className="px-6">
-
-          <div className="mb-2 border-t border-blue-gray-50 py-2 text-center">
-            <div className="mt-2 flex flex-wrap justify-center">
-              <div className="flex w-full flex-col items-center px-4 lg:w-9/12">
-                <img src={logo} />
-                <Typography className="mb-8 py-4 text-green-800 font-open-sans text-xl font-bold text-justify">
-                  "Soluciones Integrales en MANEJO DE RESIDUOS, y remediacion ambiental"
-                </Typography>
+    <>
+      <Carousel className="rounded-xl">
+        {/* <div className="relative h-full w-full">
+          <img
+            src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+            alt="image 1"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
+            <div className="w-3/4 text-center md:w-2/4">
+              <Typography
+                variant="h1"
+                color="white"
+                className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              >
+                Texto
+              </Typography>
+              <Typography
+                variant="lead"
+                color="white"
+                className="mb-12 opacity-80"
+              >
+                Mas texto texto texto texto texto texto texto texto texto
+              </Typography>
+              <div className="flex justify-center gap-2">
+                <Button size="lg" color="white">
+                  Boton
+                </Button>
+                <Button size="lg" color="white" variant="text">
+                  Otro Boton
+                </Button>
               </div>
             </div>
           </div>
-          
+        </div> */}
+        <div className="relative h-full w-full">
+          <img
+            src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+            alt="image 2"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 grid h-full w-full items-center bg-black/75">
+            <div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32">
+              <Typography
+                variant="h1"
+                color="white"
+                className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              >
+                Texto
+              </Typography>
+              <Typography
+                variant="lead"
+                color="white"
+                className="mb-12 opacity-80"
+              >
+                Mas texto texto texto texto texto texto texto texto texto texto texto texto texto texto 
+              </Typography>
+              <div className="flex gap-2">
+                <Button size="lg" color="white">
+                  Boton
+                </Button>
+                <Button size="lg" color="white" variant="text">
+                  Otro Boton
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+        <div className="relative h-full w-full">
+          <img
+            src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+            alt="image 3"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 grid h-full w-full items-end bg-black/75">
+            <div className="w-3/4 pl-12 pb-12 md:w-2/4 md:pl-20 md:pb-20 lg:pl-32 lg:pb-32">
+              <Typography
+                variant="h1"
+                color="white"
+                className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              >
+                Texto 
+              </Typography>
+              <Typography
+                variant="lead"
+                color="white"
+                className="mb-12 opacity-80"
+              >
+                Mas Texto
+              </Typography>
+              <div className="flex gap-2">
+                <Button size="lg" color="white">
+                  Boton
+                </Button>
+                <Button size="lg" color="white" variant="text">
+                  Otro Boton
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Carousel>
+      <section className='bg-black grid grid-cols-5'>
+        <div className='bg-white flex-1 px-52 col-span-3'>
+          <Typography className='pt-6 text-[2.2rem] font-open-sans font-bold text-blue-900'>
+            Transformamos desafíos ambientales en soluciones sostenibles
+          </Typography>
+          <Typography className='py-2 text-base font-open-sans text-gray-600'>
+            La gama de servicios que ofrecemos nos permite garantizar a nuestros clientes la trazabilidad de sus residuos peligrosos, desde la recolección, valorización, transporte, tratamiento, disposición final y entrega del certificado que comprueba una adecuada gestión del residuo. Contamos con las autorizaciones legales y certificaciones necesarias para cada uno de nuestros procesos.
+          </Typography>
+          <Button className='rounded-full my-6' color='green'>Conócenos</Button>
+        </div>
+
+        <div className='flex-1 col-span-2 p-16 bg-center bg-no-repeat bg-cover bg-scroll bg-[url("../../public/siembra-planta.jpg")]'>
+          <Typography className='text-[1.8rem] font-open-sans font-bold text-white'>
+            Aportamos sostenibilidad a diferentes industrias con soluciones a la medida
+          </Typography>
+          <Typography className='text-base font-open-sans text-white'>
+            Participamos como socios de nuestros clientes sumando a la sostenibilidad de su gestión empresarial, en diversas industrias del país como: minería, hidrocarburos, construcción, hospitales y clínicas, gobierno, petroquímica, agroindustria, pesquera, entre otros.
+          </Typography>
+          <Button className='rounded-full my-6' color='green'>Nuestros Servicios</Button>
+        </div>
+      </section>
+
+      <section className='bg-black py-16 bg-[url("https://sechegrouppe.dagobert-vt-preprod-seche-lamp01.dcsrv.eu/wp-content/uploads/2018/10/counter-bg.v2.jpg")]'>
+
+        <Typography className='pb-10 text-2xl font-bold font-open-sans text-white text-center'>
+          NUESTROS NÚMEROS
+        </Typography>
+
+        <div className='container grid grid-cols-4'>
+
+          <div className='flex flex-col'>
+            <Typography className='py-2 text-3xl font-bold text-orange-400 text-center'>
+              +400
+            </Typography>
+            <Typography className='text-xl font-bold text-gray-50 text-center'>
+              Clientes
+            </Typography>
+            <Typography className='text-basename font-bold text-white text-center'>
+              de diversas industrias
+            </Typography>
+          </div>
+
+          <div className='flex flex-col'>
+            <Typography className='py-2 text-3xl font-bold text-orange-400 text-center'>
+              +400
+            </Typography>
+            <Typography className='text-xl font-bold text-gray-50 text-center'>
+              Clientes
+            </Typography>
+            <Typography className='text-basename font-bold text-white text-center'>
+              de diversas industrias
+            </Typography>
+          </div>
+
+          <div className='flex flex-col'>
+            <Typography className='py-2 text-3xl font-bold text-orange-400 text-center'>
+              +400
+            </Typography>
+            <Typography className='text-xl font-bold text-gray-50 text-center'>
+              Clientes
+            </Typography>
+            <Typography className='text-basename font-bold text-white text-center'>
+              de diversas industrias
+            </Typography>
+          </div>
+
+          <div className='flex flex-col'>
+            <Typography className='py-2 text-3xl font-bold text-orange-400 text-center'>
+              +400
+            </Typography>
+            <Typography className='text-xl font-bold text-gray-50 text-center'>
+              Clientes
+            </Typography>
+            <Typography className='text-basename font-bold text-white text-center'>
+              de diversas industrias
+            </Typography>
+          </div>
+
+
+        </div>
+      </section>
+
+      <section className='py-16 bg-white'>
+        <Typography className='pb-10 text-2xl font-bold font-open-sans text-blue-900 text-center'>
+          NUESTROS SERVICIOS
+        </Typography>
+
+        <div className='container grid grid-cols-3'>
+
+          {
+            [0, 1, 2, 3, 4, 5].map((r, i) => (
+              <div key={r} className='flex flex-col'>
+                <div className='flex items-center'>
+                  <RiRecycleFill className='text-green-300' size={40} />
+                  <Typography className='text-xl pl-4 font-bold font-open-sans text-blue-900 text-center'>
+                    Total Waste Management
+                  </Typography>
+                </div>
+                <Typography className='text-base font-open-sans py-2 text-gray-500'>
+                  Brindamos el Manejo Integral de Residuos (TWM) dentro de las instalaciones de nuestros clientes, poniendo a disposición los recursos humanos, insumos y equipos necesarios.
+                </Typography>
+                <div className='py-4'>
+                  <Button className='rounded-full' color='green' variant="outlined">Ver Servicio</Button>
+                </div>
+              </div>
+            ))
+          }
+
+
+
+
+
+        </div>
+
+      </section>
+
+      <hr className='border-2' />
+
+
+    </>
   )
 }

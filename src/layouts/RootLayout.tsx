@@ -8,10 +8,10 @@ export default function RootLayout() {
       <div className='container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4'>
         <Navbar />
       </div>
-      <section className="relative block h-[50vh]">
+      {/* <section className="relative block h-[50vh]">
         <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('../../public/proceso-del-reciclaje.jpg')] bg-cover bg-center" />
         <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
-      </section>
+      </section> */}
       <Outlet />
       <Footer />
     </>
