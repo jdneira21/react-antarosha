@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo2.png'
 import { Typography, Navbar as MTNavbar, Button, IconButton, Collapse } from '@material-tailwind/react'
 import { useState } from 'react'
 import { TbHome, TbRecycle, TbTruckDelivery, TbMessage2 } from 'react-icons/tb'
