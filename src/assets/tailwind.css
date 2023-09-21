@@ -7,7 +7,7 @@ body {
 }
 
 .ulNav {
-  @apply mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6;
+  @apply mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-2;
 }
 
 .ulNav a {
@@ -20,4 +20,22 @@ body {
 
 .ulNav a.active {
   @apply bg-white/20;
+}
+
+@media (max-width: 960px) {
+  .collapseNav {
+    @apply bg-white/90 container mx-auto rounded-md py-1 px-2;
+  }
+
+  .collapseNav .ulNav li a {
+    @apply bg-gray-800;
+  }
+
+  .collapseNav .ulNav a:hover {
+    @apply bg-gray-600;
+  }
+
+  .collapseNav .ulNav a.active {
+    @apply bg-gray-900;
+  }
 }

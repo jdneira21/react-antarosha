@@ -6,42 +6,9 @@ export default function PageHome() {
   return (
     <>
       <Carousel>
-        {/* <div className="relative h-full w-full">
+        <div className="relative h-[540px] w-full">
           <img
-            src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
-            alt="image 1"
-            className="h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-            <div className="w-3/4 text-center md:w-2/4">
-              <Typography
-                variant="h1"
-                color="white"
-                className="mb-4 text-3xl md:text-4xl lg:text-5xl"
-              >
-                Texto
-              </Typography>
-              <Typography
-                variant="lead"
-                color="white"
-                className="mb-12 opacity-80"
-              >
-                Mas texto texto texto texto texto texto texto texto texto
-              </Typography>
-              <div className="flex justify-center gap-2">
-                <Button size="lg" color="white">
-                  Boton
-                </Button>
-                <Button size="lg" color="white" variant="text">
-                  Otro Boton
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div> */}
-        <div className="relative h-full w-full">
-          <img
-            src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+            src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=940&q=50"
             alt="image 2"
             className="h-full w-full object-cover"
           />
@@ -72,27 +39,27 @@ export default function PageHome() {
             </div>
           </div>
         </div>
-        <div className="relative h-full w-full">
+        <div className="relative h-[540px] w-full">
           <img
-            src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-            alt="image 3"
+            src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=940&q=50"
+            alt="image 2"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 grid h-full w-full items-end bg-black/75">
-            <div className="w-3/4 pl-12 pb-12 md:w-2/4 md:pl-20 md:pb-20 lg:pl-32 lg:pb-32">
+          <div className="absolute inset-0 grid h-full w-full items-center bg-black/75">
+            <div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32">
               <Typography
                 variant="h1"
                 color="white"
                 className="mb-4 text-3xl md:text-4xl lg:text-5xl"
               >
-                Texto 
+                Texto
               </Typography>
               <Typography
                 variant="lead"
                 color="white"
                 className="mb-12 opacity-80"
               >
-                Mas Texto
+                Mas texto texto texto texto texto texto texto texto texto texto texto texto texto texto 
               </Typography>
               <div className="flex gap-2">
                 <Button size="lg" color="white">
@@ -106,8 +73,9 @@ export default function PageHome() {
           </div>
         </div>
       </Carousel>
-      <section className='bg-black grid grid-cols-5'>
-        <div className='bg-white flex-1 px-52 col-span-3'>
+
+      <section className='grid grid-cols-5'>
+        <div className='bg-white py-2 px-6 col-span-full lg:col-span-3 md:col-span-3 sm:col-span-full'>
           <Typography className='pt-6 text-[2.2rem] font-open-sans font-bold text-blue-900'>
             Transformamos desafíos ambientales en soluciones sostenibles
           </Typography>
@@ -117,7 +85,7 @@ export default function PageHome() {
           <Button className='rounded-full my-6' color='green'>Conócenos</Button>
         </div>
 
-        <div className='flex-1 col-span-2 p-16 bg-center bg-no-repeat bg-cover bg-scroll bg-[url("../../public/siembra-planta.jpg")]'>
+        <div className='py-2 px-6 col-span-full lg:col-span-2 md:col-span-2 sm:col-span-full bg-center bg-no-repeat bg-cover bg-[url("../../public/siembra-planta.jpg")]'>
           <Typography className='text-[1.8rem] font-open-sans font-bold text-white'>
             Aportamos sostenibilidad a diferentes industrias con soluciones a la medida
           </Typography>
@@ -127,6 +95,7 @@ export default function PageHome() {
           <Button className='rounded-full my-6' color='green'>Nuestros Servicios</Button>
         </div>
       </section>
+
 
       <section className='bg-black py-16 bg-[url("https://sechegrouppe.dagobert-vt-preprod-seche-lamp01.dcsrv.eu/wp-content/uploads/2018/10/counter-bg.v2.jpg")]'>
 
@@ -193,13 +162,13 @@ export default function PageHome() {
           NUESTROS SERVICIOS
         </Typography>
 
-        <div className='container grid grid-cols-3'>
+        <div className='container grid grid-cols-2 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 p-4'>
 
           {
             [0, 1, 2, 3, 4, 5].map((r, i) => (
               <div key={r} className='flex flex-col'>
                 <div className='flex items-center'>
-                  <RiRecycleFill className='text-green-300' size={40} />
+                  <RiRecycleFill className='text-green-300' fontSize={40} />
                   <Typography className='text-xl pl-4 font-bold font-open-sans text-blue-900 text-center'>
                     Total Waste Management
                   </Typography>

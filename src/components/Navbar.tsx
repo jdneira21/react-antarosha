@@ -1,10 +1,10 @@
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/logo2.png'
-import { Typography, Navbar as MTNavbar, Button, IconButton, Collapse } from '@material-tailwind/react'
-import { useState } from 'react'
+import { Typography, Navbar as MTNavbar, Button, IconButton, Collapse, MobileNav } from '@material-tailwind/react'
+import { useEffect, useState } from 'react'
 import { TbHome, TbRecycle, TbTruckDelivery, TbMessage2 } from 'react-icons/tb'
 import { FaCircleXmark, FaBars } from 'react-icons/fa6'
-import { FaFacebookSquare } from 'react-icons/fa'
+import { FaFacebookSquare, FaTiktok, FaYoutube } from 'react-icons/fa'
 
 const links = [
   {
@@ -30,48 +30,44 @@ const links = [
 ]
 
 export default function Navbar() {
-
   const [openNav, setOpenNav] = useState(false)
-
 
   const navLinks = <ul className='ulNav'>
     {links.map(({ title, to, icon }, i) => (
       <Typography key={i} as='li' variant='small' color='inherit' className='capitalize'>
-        <NavLink to={to}>
+        <NavLink to={to} className='whitespace-nowrap'>
           {icon}
           {title}
         </NavLink>
-
-
       </Typography>
     ))}
   </ul>
 
+  useEffect(() => window.addEventListener('resize', () => window.innerWidth >= 960 && setOpenNav(false)), [])
 
   return (
-    <MTNavbar color='transparent' className='p-3'>
+    <MTNavbar color='transparent' className='p-2'>
       <div className='container mx-auto flex items-center justify-around text-white'>
         <NavLink to='/'>
           <Typography className='mr-4 ml-2 cursor-pointer py-1.5 font-bold'>
-            <img src={logo} className='h-[100px]' />
+            <img src={logo} className='w-60' />
           </Typography>
         </NavLink>
         <div className='hidden lg:block'>{navLinks}</div>
-        <div className='hidden gap-2 lg:flex'>
+        <div className='hidden px-2 gap-2 lg:flex'>
           <a href='https://www.facebook.com/amandasantosnba' target='_blank'>
-          <FaFacebookSquare />
-            {/* <Button variant='text' size='sm' color='white' fullWidth>
-              
-            </Button> */}
+            <FaFacebookSquare />
+          </a>
+          <a href='https://www.facebook.com/amandasantosnba' target='_blank'>
+            <FaTiktok />
+          </a>
+          <a href='https://www.facebook.com/amandasantosnba' target='_blank'>
+            <FaYoutube />
           </a>
         </div>
-        <IconButton
-          variant='text'
-          size='sm'
-          color='white'
+        <IconButton variant='text' size='sm' color='white'
           className='ml-auto text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden'
-          onClick={() => setOpenNav(!openNav)}
-        >
+          onClick={() => setOpenNav(!openNav)}>
           {openNav ? (
             <FaCircleXmark strokeWidth={2} className='h-6 w-6' />
           ) : (
@@ -81,22 +77,11 @@ export default function Navbar() {
 
       </div>
 
-      {/* <Collapse className='rounded-xl bg-white px-4 pt-2 pb-4 text-blue-gray-900'
-        open={!openNav}
-      >
-        <div className='container mx-auto'>
+      <Collapse open={openNav}>
+        <div className='collapseNav'>
           {navLinks}
-          <a
-            href='https://www.material-tailwind.com/blocks/react?ref=mtkr'
-            target='_blank'
-            className='mb-2 block'
-          >
-            <Button variant='text' size='sm' fullWidth>
-              pro version
-            </Button>
-          </a>
         </div>
-      </Collapse> */}
+      </Collapse>
 
     </MTNavbar>
   )
