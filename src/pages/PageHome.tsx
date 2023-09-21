@@ -26,7 +26,7 @@ export default function PageHome() {
                 color="white"
                 className="mb-12 opacity-80"
               >
-                Mas texto texto texto texto texto texto texto texto texto texto texto texto texto texto 
+                Mas texto texto texto texto texto texto texto texto texto texto texto texto texto texto
               </Typography>
               <div className="flex gap-2">
                 <Button size="lg" color="white">
@@ -59,7 +59,7 @@ export default function PageHome() {
                 color="white"
                 className="mb-12 opacity-80"
               >
-                Mas texto texto texto texto texto texto texto texto texto texto texto texto texto texto 
+                Mas texto texto texto texto texto texto texto texto texto texto texto texto texto texto
               </Typography>
               <div className="flex gap-2">
                 <Button size="lg" color="white">
@@ -97,7 +97,7 @@ export default function PageHome() {
       </section>
 
 
-      <section className='bg-black py-16 bg-[url("https://sechegrouppe.dagobert-vt-preprod-seche-lamp01.dcsrv.eu/wp-content/uploads/2018/10/counter-bg.v2.jpg")]'>
+      {/* <section className='bg-black py-16 bg-[url("https://sechegrouppe.dagobert-vt-preprod-seche-lamp01.dcsrv.eu/wp-content/uploads/2018/10/counter-bg.v2.jpg")]'>
 
         <Typography className='pb-10 text-2xl font-bold font-open-sans text-white text-center'>
           NUESTROS NÚMEROS
@@ -155,7 +155,7 @@ export default function PageHome() {
 
 
         </div>
-      </section>
+      </section> */}
 
       <section className='py-16 bg-white'>
         <Typography className='pb-10 text-2xl font-bold font-open-sans text-blue-900 text-center'>
@@ -167,12 +167,10 @@ export default function PageHome() {
           {
             [0, 1, 2, 3, 4, 5].map((r, i) => (
               <div key={r} className='flex flex-col'>
-                <div className='flex items-center'>
-                  <RiRecycleFill className='text-green-300' fontSize={40} />
-                  <Typography className='text-xl pl-4 font-bold font-open-sans text-blue-900 text-center'>
-                    Total Waste Management
-                  </Typography>
-                </div>
+                <Typography className='flex items-center text-xl font-bold font-open-sans text-blue-900'>
+                  <RiRecycleFill className='text-green-300 my-2 mx-4' size={46} />
+                  Total Waste Management
+                </Typography>
                 <Typography className='text-base font-open-sans py-2 text-gray-500'>
                   Brindamos el Manejo Integral de Residuos (TWM) dentro de las instalaciones de nuestros clientes, poniendo a disposición los recursos humanos, insumos y equipos necesarios.
                 </Typography>
