@@ -76,7 +76,7 @@ export default function PageHome() {
 
       <section className='grid grid-cols-5'>
         <div className='bg-white py-2 px-6 col-span-full lg:col-span-3 md:col-span-3 sm:col-span-full'>
-          <Typography className='pt-6 text-[2.2rem] font-open-sans font-bold text-blue-900'>
+          <Typography className='pt-6 text-[1.8rem] font-open-sans font-bold text-blue-900'>
             Transformamos desafíos ambientales en soluciones sostenibles
           </Typography>
           <Typography className='py-2 text-base font-open-sans text-gray-600'>
