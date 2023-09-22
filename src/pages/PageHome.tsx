@@ -36,14 +36,14 @@ export default function PageHome() {
     <>
       <Carousel>
         {carouselItems.map((item, i) => (
-          <div key={i} className='relative h-[460px] w-full'>
+          <div key={i} className='relative h-[400px] w-full'>
             <img src={item.imagen} alt='image 2' className='h-full w-full object-cover' />
-            <div className='absolute inset-0 grid h-full w-full items-center bg-black/75'>
-              <div className='w-3/4 md:w-3/4 pl-12  md:pl-20 lg:pl-44'>
-                <Typography variant='h1' color='white' className='mb-2 text-2xl md:text-4xl lg:text-4xl'>
+            <div className='absolute inset-0 grid h-full w-full items-center bg-black/60'>
+              <div className='w-3/4 md:w-3/4 pl-12 md:pl-20 lg:pl-44 flex flex-col gap-16 pt-12'>
+                <Typography variant='h1' color='white' className='text-2xl md:text-4xl lg:text-4xl'>
                   {item.title}
                 </Typography>
-                <div className='flex py-6'>
+                <div className='flex'>
                   <NavLink to={item.to}>
                     <Button size='lg' color='white'>
                       {item.buttonTitle}

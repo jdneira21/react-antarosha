@@ -46,43 +46,46 @@ export default function Navbar() {
   useEffect(() => window.addEventListener('resize', () => window.innerWidth >= 960 && setOpenNav(false)), [])
 
   return (
-    <MTNavbar color='transparent' className='p-2'>
-      <div className='container mx-auto flex items-center justify-around text-white'>
-        <NavLink to='/'>
-          <Typography className='mr-4 ml-2 cursor-pointer py-1.5 font-bold'>
-            <img src={logo} className='w-60' />
-          </Typography>
-        </NavLink>
-        <div className='hidden lg:block'>{navLinks}</div>
-        <div className='hidden px-2 gap-2 lg:flex'>
-          <a href='https://www.facebook.com/amandasantosnba' target='_blank'>
-            <FaFacebookSquare />
-          </a>
-          <a href='https://www.facebook.com/amandasantosnba' target='_blank'>
-            <FaTiktok />
-          </a>
-          <a href='https://www.facebook.com/amandasantosnba' target='_blank'>
-            <FaYoutube />
-          </a>
+    <div className='container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4'>
+
+      <MTNavbar color='transparent' className='p-2'>
+        <div className='container mx-auto flex items-center justify-around text-white'>
+          <NavLink to='/'>
+            <Typography className='mr-4 ml-2 cursor-pointer py-1.5 font-bold'>
+              <img src={logo} className='w-60' />
+            </Typography>
+          </NavLink>
+          <div className='hidden lg:block'>{navLinks}</div>
+          <div className='hidden px-2 gap-2 lg:flex'>
+            <a href='https://www.facebook.com/amandasantosnba' target='_blank'>
+              <FaFacebookSquare />
+            </a>
+            <a href='https://www.facebook.com/amandasantosnba' target='_blank'>
+              <FaTiktok />
+            </a>
+            <a href='https://www.facebook.com/amandasantosnba' target='_blank'>
+              <FaYoutube />
+            </a>
+          </div>
+          <IconButton variant='text' size='sm' color='white'
+            className='ml-auto text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden'
+            onClick={() => setOpenNav(!openNav)}>
+            {openNav ? (
+              <FaCircleXmark strokeWidth={2} className='h-6 w-6' />
+            ) : (
+              <FaBars strokeWidth={2} className='h-6 w-6' />
+            )}
+          </IconButton>
+
         </div>
-        <IconButton variant='text' size='sm' color='white'
-          className='ml-auto text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden'
-          onClick={() => setOpenNav(!openNav)}>
-          {openNav ? (
-            <FaCircleXmark strokeWidth={2} className='h-6 w-6' />
-          ) : (
-            <FaBars strokeWidth={2} className='h-6 w-6' />
-          )}
-        </IconButton>
 
-      </div>
+        <Collapse open={openNav}>
+          <div className='collapseNav'>
+            {navLinks}
+          </div>
+        </Collapse>
 
-      <Collapse open={openNav}>
-        <div className='collapseNav'>
-          {navLinks}
-        </div>
-      </Collapse>
-
-    </MTNavbar>
+      </MTNavbar>
+    </div>
   )
 }
