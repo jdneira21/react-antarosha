@@ -23,8 +23,8 @@ const links = [
     icon: <TbTruckDelivery />
   },
   {
-    title: 'Quienes Somos',
-    to: '/quienes-somos',
+    title: 'Conócenos',
+    to: '/conocenos',
     icon: <TbMessage2 />
   }
 ]
