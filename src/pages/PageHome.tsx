@@ -7,25 +7,25 @@ const carouselItems = [
   {
     title: 'La sostenibilidad es una inversión en nuestro propio futuro',
     to: '/conocenos',
-    imagen: '../public/1.png',
+    imagen: '../1.jpg',
     buttonTitle: 'CONÓCENOS'
   },
   {
     title: 'Soluciones integrales en manejo de residuos y remediación ambiental.',
     to: '/servicios',
-    imagen: '../public/2.png',
+    imagen: '../2.jpg',
     buttonTitle: 'SERVICIOS'
   },
   {
     title: 'Estamos en toda la selva central y el Perú',
     to: '/contactanos',
-    imagen: '../public/3.png',
+    imagen: '../3.jpg',
     buttonTitle: 'CONTÁCTANOS'
   },
   {
     title: 'El trono móvil te espera.',
     to: '/contactanos',
-    imagen: '../public/4.png',
+    imagen: '../4.jpg',
     buttonTitle: 'BAÑOS PORTÁTILES / LAVADEROS'
   }
 ]
