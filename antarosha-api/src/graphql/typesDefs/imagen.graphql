@@ -1,0 +1,10 @@
+type Imagen {
+  id: ID
+  name: String
+  slug: String
+  title: String
+}
+
+type Query {
+  allImages: [Imagen]
+}

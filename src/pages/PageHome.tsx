@@ -67,7 +67,10 @@ export default function PageHome() {
           <Button className='rounded-full my-6' color='green'>Conócenos</Button>
         </div>
 
-        <div className='py-2 px-6 col-span-full lg:col-span-2 md:col-span-2 sm:col-span-full bg-center bg-no-repeat bg-cover bg-[url("../../public/siembra-planta.jpg")]'>
+        <div className='py-2 px-6 col-span-full lg:col-span-2 md:col-span-2 sm:col-span-full bg-center bg-no-repeat bg-cover bg-[url("../../public/siembra-planta.jpg")]'
+        style={{
+          textShadow: '0 2px black'
+        }}>
           <Typography className='text-[1.8rem] font-open-sans font-bold text-white'>
             Aportamos sostenibilidad a diferentes industrias con soluciones a la medida
           </Typography>
