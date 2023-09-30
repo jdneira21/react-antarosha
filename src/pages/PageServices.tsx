@@ -16,12 +16,19 @@ export default function PageServices() {
           </Typography>
         </div>
 
+
+
         <div className='mb-2 border-t border-blue-gray-50 py-2 text-center'>
           <div className='mb-2 flex items-center justify-center gap-2'>
             <Typography className='font-medium text-blue-gray-700'>
-              DIPOSICIÓN FINAL DE RESIDUOS SÓLIDOS
+              GESTIÓN FINAL DE RESIDUOS SÓLIDOS
             </Typography>
+            {/* <div className='container flex justify-center'>
+              <img src='../13.jpg' className='rounded border-2 border-white shadow-lg' />
+            </div> */}
           </div>
+
+
           <div className='mt-2 flex flex-wrap justify-center'>
             <div className='flex w-full flex-col items-center px-4 lg:w-9/12'>
               <Typography className='mb-8 font-normal text-blue-gray-500 text-justify'>
@@ -36,11 +43,14 @@ export default function PageServices() {
             <Typography className='font-medium text-blue-gray-700'>
               MANEJO INTEGRAL DE RESIDUOS SÓLIDOS
             </Typography>
+            {/* <div className='container flex justify-center'>
+              <img src='../14.jpg' className='rounded border-2 border-white shadow-lg' />
+            </div> */}
           </div>
           <div className='mt-2 flex flex-wrap justify-center'>
             <div className='flex w-full flex-col items-center px-4 lg:w-9/12'>
               <Typography className='mb-8 font-normal text-blue-gray-500 text-justify'>
-                Con amplia capacidad logística y los permisos de EO-RS, brindamos soluciones integrales para el condicionamiento, recojo y transporte (terrestre y uvial) de residuos peligrosos y no peligrosos; incluyendo servicios de manejo interno de residuos en campamentos petroleros o mineros y recojo de residuos en zonas remotas.
+                Con amplia capacidad logística y los primeros de EO – RS, brindamos soluciones integrales para el condicionamiento, recojo y transporte (terrestre y fluvial) de residuos peligrosos y no peligrosos, incluyendo servicios de manejo interno de residuos en campamentos petroleros o mineros y recojo de residuos en zonas remotas.
               </Typography>
             </div>
           </div>
@@ -51,11 +61,32 @@ export default function PageServices() {
             <Typography className='font-medium text-blue-gray-700'>
               RESPUESTA A EMERGENCIA Y REMEDIACIÓN AMBIENTAL
             </Typography>
+            {/* <div className='container flex justify-center'>
+              <img src='../15.jpg' className='rounded border-2 border-white shadow-lg' />
+            </div> */}
           </div>
           <div className='mt-2 flex flex-wrap justify-center'>
             <div className='flex w-full flex-col items-center px-4 lg:w-9/12'>
               <Typography className='mb-8 font-normal text-blue-gray-500 text-justify'>
                 Soluciones integrales para la contención, primera respuesta, limpieza y remediación ambiental de derrames de hidrocarburos y materiales peligrosos. Dentro y fuera de las operaciones de nuestros clientes. Identificación y gestión de pasivos ambientales.
+              </Typography>
+            </div>
+          </div>
+        </div>
+
+        <div className='mb-2 border-t border-blue-gray-50 py-2 text-center'>
+          <div className='mb-2 flex items-center justify-center gap-2'>
+            <Typography className='font-medium text-blue-gray-700'>
+              ALQUILER DE BAÑOS Y LAVADEROS PORTÁTILES
+            </Typography>
+            {/* <div className='container flex justify-center'>
+              <img src='../15.jpg' className='rounded border-2 border-white shadow-lg' />
+            </div> */}
+          </div>
+          <div className='mt-2 flex flex-wrap justify-center'>
+            <div className='flex w-full flex-col items-center px-4 lg:w-9/12'>
+              <Typography className='mb-8 font-normal text-blue-gray-500 text-justify'>
+                Nuestro equipo profesional se encarga del transporte, instalación y limpieza de nuestros baños portátiles para que usted no tenga que preocuparse por nada.
               </Typography>
             </div>
           </div>

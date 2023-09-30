@@ -34,7 +34,7 @@ export default function Images() {
         <figure key={i} className='relative w-full'>
           <img
             className='h-full w-full rounded-xl object-cover object-center'
-            src={`http://127.0.0.1:4001/${imagen.url_img}`}
+            src={`${import.meta.env.VITE_API_IP}:${import.meta.env.VITE_API_PORT}/${imagen.url_img}`}
           />
           <figcaption className='absolute bottom-8 left-2/4 flex w-[calc(100%-4rem)] -translate-x-2/4 justify-between rounded-md bg-white/40 py-4 px-6 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm'>
             <Typography variant='lead' color='blue-gray' className='text-lg font-open-sans text-black font-bold'>

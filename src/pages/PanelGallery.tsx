@@ -5,10 +5,6 @@ import DialogAddAlbum from '../components/DialogAddAlbum'
 import useAlbum from '../store/useAlbum'
 import PanelAlbums from '../components/PanelAlbums'
 
-
-
-
-
 export default function PanelGalery() {
   const { openDialogAlbum } = useAlbum()
 

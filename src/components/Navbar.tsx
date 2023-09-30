@@ -4,7 +4,7 @@ import { Typography, Navbar as MTNavbar, Button, IconButton, Collapse, MobileNav
 import { useEffect, useState } from 'react'
 import { TbHome, TbRecycle, TbTruckDelivery, TbMessage2 } from 'react-icons/tb'
 import { FaCircleXmark, FaBars } from 'react-icons/fa6'
-import { FaFacebookSquare, FaTiktok, FaYoutube } from 'react-icons/fa'
+import { FaFacebookSquare, FaTiktok, FaYoutube, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { FaRegImages } from 'react-icons/fa6'
 
 
@@ -67,8 +67,14 @@ export default function Navbar() {
             <a href='https://www.facebook.com/amandasantosnba' target='_blank'>
               <FaFacebookSquare />
             </a>
-            <a href='https://www.facebook.com/amandasantosnba' target='_blank'>
+            <a href='https://www.tiktok.com/@antarosha' target='_blank'>
               <FaTiktok />
+            </a>
+            <a href='https://www.instagram.com/antarosha' target='_blank'>
+              <FaInstagram />
+            </a>
+            <a href='https://www.linkedin.com/company/antarosha/   ' target='_blank'>
+              <FaLinkedin />
             </a>
             <a href='https://www.facebook.com/amandasantosnba' target='_blank'>
               <FaYoutube />

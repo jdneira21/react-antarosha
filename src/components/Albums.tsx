@@ -24,27 +24,19 @@ export default function Albums() {
       {error ? <p>Error: {error.message}</p> : null}
 
       {data?.allAlbum?.map((album: any) => (
-        <Card key={album.id} className="max-w-[24rem] overflow-hidden">
-          <CardHeader
-            floated={false}
-            shadow={false}
-            color="transparent"
-            className="m-0 rounded-none"
-          >
-            <img
-              src={`http://127.0.0.1:4001/${album.url_img}`}
-              alt="ui/ux review check"
-            />
+        <Card key={album.id} className='max-w-[24rem] overflow-hidden'>
+          <CardHeader floated={false} shadow={false} color='transparent' className='m-0 rounded-none'>
+            <img src={`${import.meta.env.VITE_API_IP}:${import.meta.env.VITE_API_PORT}/${album.url_img}`} />
           </CardHeader>
           <CardBody>
-            <Typography variant="h5" color="blue-gray">
+            <Typography variant='h5' color='blue-gray'>
               {album.title_album}
             </Typography>
-            <Typography variant="lead" color="gray" className="text-sm">
+            <Typography variant='lead' color='gray' className='text-sm'>
               {album.description}
             </Typography>
           </CardBody>
-          <CardFooter className="flex items-center justify-center !pt-0">
+          <CardFooter className='flex items-center justify-center !pt-0'>
             <NavLink to={album.slug}>
               <Button className='rounded-full' color='green'>Ver Galería</Button>
             </NavLink>
