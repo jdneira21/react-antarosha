@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react'
 import { TbHome, TbRecycle, TbTruckDelivery, TbMessage2 } from 'react-icons/tb'
 import { FaCircleXmark, FaBars } from 'react-icons/fa6'
 import { FaFacebookSquare, FaTiktok, FaYoutube } from 'react-icons/fa'
+import { FaRegImages } from 'react-icons/fa6'
+
 
 const links = [
   {
@@ -16,6 +18,11 @@ const links = [
     title: 'Servicios',
     to: '/servicios',
     icon: <TbRecycle />
+  },
+  {
+    title: 'Galería',
+    to: '/galeria',
+    icon: <FaRegImages />
   },
   {
     title: 'Operaciones',

@@ -1,23 +1,56 @@
 import 'dotenv/config'
 import cors from 'cors'
-import http from 'http'
-import path from 'path'
+import http from 'node:http'
+import path from 'node:path'
 
 import express, { Application } from 'express'
 import { ApolloServer } from '@apollo/server'
 import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer'
 import { makeExecutableSchema } from '@graphql-tools/schema'
-import { mergeResolvers, mergeTypeDefs } from '@graphql-tools/merge'
-import { loadFilesSync } from '@graphql-tools/load-files'
 import { expressMiddleware } from '@apollo/server/express4'
+import resolvers from './graphql/resolvers'
 
 import './connetBd'
 
-const resolverFiles = loadFilesSync(path.join(__dirname, 'graphql/resolvers'))
-const typesDefsFiles = loadFilesSync(path.join(__dirname, 'graphql/typesDefs'), { extensions: ['graphql'] })
+const typeDefs = `#graphql
+  # This "Book" type defines the queryable fields for every book in our data source.
+type Album {
+  id: ID
+  title_album: String
+  description: String
+  thumbnail: String
+  url_img: String
+  slug: String
+}
 
-const resolvers = mergeResolvers(resolverFiles)
-const typeDefs = mergeTypeDefs(typesDefsFiles)
+type Imagen {
+  url_img: String
+  description: String
+}
+
+input InputAlbum {
+  title_album: String
+  description: String
+  base64_img: String
+}
+
+input InputImage {
+  description: String
+  base64_img: String
+  album_id: String
+}
+
+type Query {
+  allAlbum: [Album]
+  showImages(slug: String): [Imagen]
+}
+
+type Mutation {
+  addAlbum(input: InputAlbum): String!
+  addImagen(input: InputImage): String!
+}
+
+`  
 
 const schema = makeExecutableSchema({ resolvers, typeDefs })
 
@@ -30,20 +63,23 @@ async function startApolloServer() {
 
   const server = new ApolloServer({
     schema,
+    // resolvers,
+    // typeDefs,
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
   })
 
   await server.start();
-
+  
+  app.use(cors())
   app.get('/', (_, res) => res.send('API ANTAROSHA - JDesign'))
+  app.use(express.static(path.join(__dirname, 'public')))
+  app.use(express.json({ limit: '5mb'}))
+  
 
   app.use(
     '/graphql',
-    cors(),
-    express.static(path.join(__dirname, 'public')),
-    express.json({}),
     expressMiddleware(server),
-  );
+  )
 
   await new Promise<void>((resolve) => httpServer.listen({ port }, resolve))
 

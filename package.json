@@ -10,13 +10,26 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@apollo/client": "^3.8.4",
     "@material-tailwind/react": "^2.1.1",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "graphql": "^16.8.1",
+    "lucide-react": "^0.279.0",
     "react": "^18.2.0",
+    "react-cropper-custom": "^1.2.7",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.46.2",
+    "react-hot-toast": "^2.4.1",
     "react-icons": "^4.11.0",
-    "react-router-dom": "^6.15.0"
+    "react-router-dom": "^6.15.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7",
+    "zustand": "^4.4.1"
   },
   "devDependencies": {
+    "@types/node": "^20.7.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react-swc": "^3.0.0",
